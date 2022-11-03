@@ -8,7 +8,7 @@ const count = 10;
 const maxlength = 300;
 const format = "json";
 // const urlPreset = "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=440&count=3&maxlength=300&format=json";
-const urlPreset = "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?";
+const urlPreset = "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?";
 function PopulateNews()
 {
     var request = new XMLHttpRequest();

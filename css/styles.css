@@ -160,20 +160,6 @@ nav li {
     align-content: space-between;
 }
 
-/* Modes */
-#modes-flexbox
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: space-between;
-}
-
-.modehidden
-{
-  display: none;
-}
-
 
 
 /* News */
@@ -190,6 +176,19 @@ nav li {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+#news-flexbox{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
 /* Modes */
 #modeBanner {
   background: rgb(40, 29, 23);
@@ -203,4 +202,17 @@ nav li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#modes-flexbox
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+.modehidden
+{
+  display: none;
 }

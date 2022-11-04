@@ -180,7 +180,7 @@ nav li {
 
 #news-flexbox{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 

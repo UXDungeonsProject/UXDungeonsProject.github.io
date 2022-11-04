@@ -6,12 +6,12 @@ function PopulateNews()
     request.open("GET", url);
     request.setRequestHeader("Content-type", "application/json; charset=UTF-8");
     request.setRequestHeader("Access-Control-Allow-Origin", "*")
-    request.send()
     console.log("Sent request")
     request.onload = ()=>{
         console.log(request.response)
         console.log(JSON.parse(request.response));
     }
+    request.send()
 }
 
 

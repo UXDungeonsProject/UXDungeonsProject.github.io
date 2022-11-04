@@ -180,6 +180,7 @@ nav li {
 
 #news-flexbox{
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
@@ -210,6 +211,23 @@ nav li {
     flex-direction: row;
     justify-content: space-evenly;
     align-content: space-between;
+}
+
+.mode-flexbox
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.centering-flexbox
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .modehidden

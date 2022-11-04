@@ -8,8 +8,8 @@ function PopulateNews()
     request.setRequestHeader("Access-Control-Allow-Origin", "*")
     request.send()
     console.log("Sent request")
-    console.log(request.response)
     request.onload = ()=>{
+        console.log(request.response)
         console.log(JSON.parse(request.response));
     }
 }

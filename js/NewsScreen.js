@@ -1,23 +1,19 @@
 // Javascript code for the news page
-const AppId = 1668290;
-
-const TestAppId = 1593750;
-
-
-const count = 10;
-const maxlength = 300;
-const format = "json";
-// const urlPreset = "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=440&count=3&maxlength=300&format=json";
-const urlPreset = "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?";
+const url = "https://uxdungeonsproject.github.io/php/SteamNews.php"
 function PopulateNews()
 {
     var request = new XMLHttpRequest();
-    var urlRequest = urlPreset + "appid=" + TestAppId + "&count=" + count + "&maxlength=" + maxlength + "&format=" + format;
-    request.open('GET', urlRequest);
-    request.send();
+    request.open("GET", url);
+    request.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    request.setRequestHeader("Access-Control-Allow-Origin", "*")
+    request.send()
+    console.log("Sent request")
     request.onload = ()=>{
+        console.log(request.response)
         console.log(JSON.parse(request.response));
     }
 }
+
+
 
 

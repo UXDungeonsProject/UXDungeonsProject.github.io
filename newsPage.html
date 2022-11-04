@@ -13,44 +13,37 @@
     <link href="css/styles.css" rel="stylesheet" />
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/NewsScreen.js"></script>
+    <script type="text/javascript" src="js/NavBar.js" defer></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </head>
   <body onload="PopulateNews()">
     <!-- Navbar -->
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"
-          ><img
-            src="./assets/img/aetherstudios-logo-small.webp"
-            alt="DOA Logo "
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="text-center collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Trailer</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./characterPage.html">Character</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./newsPage.html">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./modePage.html">Modes</a>
+      <nav class="navbar">
+          <a href="https://aetherstudios.com" class="nav-logo"><img src="assets/img/aetherstudios-logo-small.webp" 
+            alt="Aether Studios Logo" width="140" height="57"></a>
+          <ul class="nav-menu">
+              <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">Trailer</a>
+              </li>
+              <li class="nav-item">
+                  <a href="characterPage.html" class="nav-link">Characters</a>
+              </li>
+              <li class="nav-item">
+                  <a href="newsPage.html" class="nav-link">News</a>
+              </li>
+              <li class="nav-item">
+                <a href="modePage.html" class="nav-link">Modes</a>
             </li>
           </ul>
-        </div>
+          <div class="menu-bars">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
       </nav>
     </div>
     <!-- Navbar -->

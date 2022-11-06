@@ -12,9 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
   </head>
   <body onload="LoadCharacterImages()">
     <!-- Navbar -->
@@ -37,7 +37,7 @@
               </li>
               <li class="nav-item">
                 <a href="modePage.html" class="nav-link">Modes</a>
-            </li>
+              </li>
           </ul>
           <div class="menu-bars">
               <span class="bar"></span>
@@ -54,12 +54,28 @@
           <p class="title text-center">Characters</p>
           <!--Where the character cards will be held-->
           <div id = "character-flexbox">
-
+            <img src = "./assets/img/Dungeon_steampage_heroes_fleet.png" title="FleetCharacter" id="FleetCharacter">
+            <img src = "./assets/img/Dungeon_steampage_heroes_hamir.png" title="HamirCharacter" id="HamirCharacter">
+            <img src = "./assets/img/Dungeon_steampage_heroes_slade.png" title="SladeCharacter" id="SladeCharacter">
+            <img src = "./assets/img/Dungeon_steampage_heroes_artemis.png" title="ArtemisCharacter" id="ArtemisCharacter">
           </div>
 
-          <div class = "character-text-div">
-            <p id = "character-text"></p>
+          <div id = "FleetSection">
+            <p>Fleet is the self-proclaimed protector of her hometown of Julesvale, although she's seen as a clumsy menace more than a hero. As the jack of all trades, Fleet is a great character for learning the combat system.</p>
           </div>
+
+          <div id = "HamirSection" class="modeHidden">
+            <p>Hamir is a former Wall Runner from the mighty Rock Wall. He has made his way to Julesvale in exile after losing his trusted partner. Hamir now finds himself looking for a purpose and the courage to carry on.. Hamir is strong and sturdy, weathering blows until the time is right to crush his foes.</p>
+          </div>
+
+          <div id = "SladeSection" class="modeHidden">
+            <p>Slade is a pirate from the far-off Polekai Islands. He has made his way to Julesvale hunting a mysterious rare mineral unique to Julesvale. Rumor has it the mineral is key to saving his homeland. Slade's style and swagger allow him to dodge attacks entirely if his speed is high enough.</p>
+          </div>
+
+          <div id="ArtemisSection" class="modeHidden">
+            <p>Artemis is a renowned general in the Fire Mora who often fought alongside  Zetterburn. She was sent to Julesvale by Emperor Loxodont on a secret mission. Artemis can heal her wounds in battle, showing off her innate regeneration abilities.</p>
+          </div>
+
         </div>
       </div>
     </div>

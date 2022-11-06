@@ -251,7 +251,6 @@ a {
   background-size: cover;
 }
 
-
 #news-flexbox{
   display: flex;
   flex-direction: row;
@@ -259,7 +258,21 @@ a {
 }
 
 
+/*Trailer*/
 
+#trailerBanner {
+  background: rgb(40, 29, 23);
+  background: linear-gradient(
+      180deg,
+      rgba(40, 29, 23, 0) 50%,
+      rgba(40, 29, 23, 1) 96%
+    ),
+    url("../assets/img/store_page_background.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 

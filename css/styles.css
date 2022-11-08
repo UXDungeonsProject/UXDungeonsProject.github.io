@@ -230,6 +230,10 @@ a {
   align-content: space-between;
 }
 
+#character-flexbox img {
+  width: 20vw;
+}
+
 /* News */
 #newsBanner {
   background: rgb(40, 29, 23);

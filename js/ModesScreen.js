@@ -21,14 +21,20 @@ function ToggleModes(id)
         modeSection = document.getElementById(idElement);
         if(idElement != id)
         {
-            modeSection.className = "modeHidden"
+            modeSection.style.display = 'none'
         }
         else
         {
-            modeSection.className = ""
+            modeSection.style.display = 'block'
         }
         console.log(modeSection.className)
     })
+}
+
+
+function LoadMode()
+{
+    ToggleModes(sectionIds[0])
 }
 
 

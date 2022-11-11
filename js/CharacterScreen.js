@@ -34,11 +34,11 @@ function ChangeCharacterText(id)
         modeSection = document.getElementById(sectionId);
         if(sectionId != sectionIds[id])
         {
-            modeSection.className = "modeHidden"
+            modeSection.style.display = 'none'
         }
         else
         {
-            modeSection.className = ""
+            modeSection.style.display = 'block'
         }
     })
 }
@@ -52,4 +52,7 @@ function LoadCharacterImages()
             ChangeCharacterText(index);
         }
     });
+
+
+    ChangeCharacterText(0)
 }

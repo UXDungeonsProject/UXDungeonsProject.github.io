@@ -26,6 +26,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+p {
+  font-size: large;
+}
+
+
 
 body {
   background-color: #281d17;

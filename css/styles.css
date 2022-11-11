@@ -30,8 +30,6 @@ p {
   font-size: large;
 }
 
-
-
 body {
   background-color: #281d17;
   height: 100vh;
@@ -40,7 +38,7 @@ body {
 }
 
 nav li {
-  font-size: 30px;
+  font-size: 35px;
   padding: 0.5rem 2rem;
 }
 
@@ -68,11 +66,13 @@ nav li {
 .video {
   max-width: 20vw;
   border: 10px solid #5c4437;
+  border-radius: 8px;
 }
 
 .video-mid {
   max-width: 30vw;
   border: 10px solid #5c4437;
+  border-radius: 8px;
 }
 
 .steam-btn {
@@ -239,6 +239,10 @@ a {
   width: 20vw;
 }
 
+.character_text {
+  width: 50vw;
+  margin: 30px auto;
+}
 /* News */
 #newsBanner {
   background: rgb(40, 29, 23);
@@ -280,6 +284,7 @@ a {
   width: 60%;
   height: 50vh;
   border: 10px solid #281d17;
+  border-radius: 10px;
 }
 
 /* Modes */

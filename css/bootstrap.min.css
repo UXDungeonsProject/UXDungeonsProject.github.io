@@ -6755,16 +6755,16 @@ fieldset:disabled .btn {
   word-break: break-word !important;
 }
 .text-primary {
-  color: #0d6efd !important;
+  color: #F6F6F6 !important;
 }
 .text-secondary {
-  color: #6c757d !important;
+  color: #989898 !important;
 }
 .text-success {
   color: #198754 !important;
 }
 .text-info {
-  color: #0dcaf0 !important;
+  color: #ff993f !important;
 }
 .text-warning {
   color: #ffc107 !important;

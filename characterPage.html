@@ -5,53 +5,49 @@
     <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
     <!--<script type="text/javascript" src="js/md5.js"></script>-->
     <script type="text/javascript" src="js/CharacterScreen.js"></script>
-    <script type="text/javascript" src="js/NavBar.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body onload="LoadCharacterImages()">
-    <!-- Navbar -->
-    <div>
-      <nav class="navbar">
-        <a href="https://aetherstudios.com" class="nav-logo"
-          ><img
-            src="assets/img/aetherstudios-logo-small.webp"
-            alt="Aether Studios Logo"
-            width="140"
-            height="57"
-        /></a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="trailerPage.html" class="nav-link">Trailer</a>
-          </li>
-          <li class="nav-item">
-            <a href="characterPage.html" class="nav-link">Characters</a>
-          </li>
-          <li class="nav-item">
-            <a href="newsPage.html" class="nav-link">News</a>
-          </li>
-          <li class="nav-item">
-            <a href="modePage.html" class="nav-link">Modes</a>
-          </li>
-        </ul>
-        <div class="menu-bars">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <!-- NavBar -->
+    <div class="header">
+      <nav class="navbar navbar-expand-md navbar-light pt-0">
+        <a href="https://aetherstudios.com" class="nav-logo">
+          <img
+          src="assets/img/aetherstudios-logo-small.webp"
+          alt="Aether Studios Logo"
+          width="140"
+          height="57"
+          />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse pb-4" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-primary" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="newsPage.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled text-secondary" href="characterPage.html">Characters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="modePage.html">Modes</a>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>
-    <!-- Navbar -->
     <!-- Background banner -->
     <div class="bg-image flex" id="characterBanner">
       <div class="h-100 d-flex justify-content-center align-items-center">

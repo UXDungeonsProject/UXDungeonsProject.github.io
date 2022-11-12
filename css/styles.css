@@ -43,9 +43,10 @@ nav li {
 }
 
 .logo {
-  margin-bottom: 50vh;
+  margin-bottom: 35vh;
   margin-top: 10vh;
-  max-width: 40vw;
+  max-width: 500px;
+  min-width: 325px;
 }
 
 .header-band {
@@ -124,11 +125,7 @@ nav li {
 
 /* Navigation bar */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 html {
   font-size: 60%;
@@ -143,12 +140,17 @@ a {
   text-decoration: none;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
+.header {
+  position: fixed;
+  top: 0;
   align-items: center;
-  padding: 1rem 1rem;
-  background: #5c4437;
+  width: 100%;
+  background-image: url("../assets/img/header-bg.svg");
+}
+
+.navbar {
+  max-width: 1300px;
+  margin: auto;
 }
 
 .menu-bars {
@@ -165,16 +167,16 @@ a {
   background-color: rgba(255, 255, 255, 0.87);
 }
 
-.nav-menu {
+/* .nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #5c4437;
-}
+} */
 
-.nav-item {
+/* .nav-item {
   margin-left: 0.2em;
-}
+} */
 
 .nav-link {
   font-size: 70%;
@@ -187,11 +189,6 @@ a {
 
 .nav-link:hover {
   color: #ff993f;
-}
-
-.nav-logo {
-  max-width: 100%;
-  height: auto;
 }
 
 /* Characters */
@@ -328,49 +325,14 @@ a {
   display: none;
 }
 
-@media only screen and (max-width: 414px) {
-  .nav-menu {
-    z-index: 10;
-    position: fixed;
-    left: -100%;
-    top: 7.5rem;
-    flex-direction: column;
-    background-color: #5c4437;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-
-  .nav-item {
-    margin: 1rem 0;
-  }
-
-  .menu-bars {
-    display: block;
-    cursor: pointer;
-  }
-
-  .menu-bars.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-bars.active .bar:nth-child(1) {
-    -webkit-transform: translateY(8px) rotate(45deg);
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .menu-bars.active .bar:nth-child(3) {
-    -webkit-transform: translateY(-8px) rotate(-45deg);
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
+@media only screen and (max-width: 767px) {
   #character-flexbox {
     display: flex;
     flex-direction: column;
   }
+  /* fills mobile dropdown items with this color */
+  .navbar-collapse.collapsing, .navbar-collapse.collapse.show {
+    background-color: #452a1b;
+  }
 }
+

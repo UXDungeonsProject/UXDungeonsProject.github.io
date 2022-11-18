@@ -18,5 +18,6 @@ module.exports = {
   ],
   rules: {
     'no-unused-vars': ['warn'],
+    'linebreak-style': ['error', 'windows'],
   },
 };

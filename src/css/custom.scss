@@ -82,9 +82,19 @@ $dark: #281d17;
     text-shadow: 2px 2px 5px #000000;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1375px) {
     .about-bg {
         height: 65vh;
+        grid-template-rows: repeat(4, 150px);
+    }
+    .about.div3 {
+        grid-row: 3;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-bg {
+        height: 600px;
         grid-template-rows: repeat(4, 150px);
     }
     .about.div3 {

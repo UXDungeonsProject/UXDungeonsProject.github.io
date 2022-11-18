@@ -1,9 +1,16 @@
 import React from 'react';
-import Mask from './Mask';
+
+const footerStyle = {
+  width: '100%',
+  height: '90px',
+  backgroundColor: '#080403',
+};
 
 function Footer() {
   return (
-    <div />
+    <div style={footerStyle}>
+      <div />
+    </div>
   );
 }
 

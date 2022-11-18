@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.cb4e590a.css",
-    "main.js": "/static/js/main.fb2fe694.js",
+    "main.css": "/static/css/main.fe4154d6.css",
+    "main.js": "/static/js/main.d8d4430b.js",
     "static/media/dungeons-of-aether-promo-background-recentered.jpg": "/static/media/dungeons-of-aether-promo-background-recentered.f9bb221491dc0cd7054e.jpg",
     "static/media/dungeons-of-aether-scenery-background.jpg": "/static/media/dungeons-of-aether-scenery-background.b449b6243f6e6a707a13.jpg",
     "static/media/characters_grouped.png": "/static/media/characters_grouped.1b7fba15739334018220.png",
+    "static/media/pixel-art-background.jpg": "/static/media/pixel-art-background.dfcaacc5637f043ec468.jpg",
     "static/media/DUNGEONSofAETHER_logo-optimized.png": "/static/media/DUNGEONSofAETHER_logo-optimized.01cb7666095b000a2bfe.png",
+    "static/media/texture.jpg": "/static/media/texture.525d0c8c557b16bb80ee.jpg",
     "static/media/paper-edge-mask.svg": "/static/media/paper-edge-mask.44fae55ca8724b8844769237c23ec622.svg",
     "static/media/aetherstudios-logo-small.webp": "/static/media/aetherstudios-logo-small.25ee91e21aa5e8673f96.webp",
     "static/media/dungeon-button.svg": "/static/media/dungeon-button.ce134ed89c05eb60b17995b649946914.svg",
     "static/media/dungeon-button-highlight.svg": "/static/media/dungeon-button-highlight.16879e0a7881267258ea48f8d07fe783.svg",
     "index.html": "/index.html",
-    "main.cb4e590a.css.map": "/static/css/main.cb4e590a.css.map",
-    "main.fb2fe694.js.map": "/static/js/main.fb2fe694.js.map"
+    "main.fe4154d6.css.map": "/static/css/main.fe4154d6.css.map",
+    "main.d8d4430b.js.map": "/static/js/main.d8d4430b.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb4e590a.css",
-    "static/js/main.fb2fe694.js"
+    "static/css/main.fe4154d6.css",
+    "static/js/main.d8d4430b.js"
   ]
 }

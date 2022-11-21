@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import parseHtml from 'html-react-parser';
 
 import { parseISO, format as formatDate } from 'date-fns';
-import placeHolderImage from '../assets/img/texture.jpg';
+import placeHolderImage from '../assets/img/DUNGEONSofAETHER_logo-optimized.png';
 
 const newsPreviewStyle = {
   width: '350px',
   minWidth: '350px',
   height: '500px',
-  backgroundColor: 'red',
-  margin: '20px',
+  margin: '10px',
+  overflow: 'hidden',
 };
 
 export default function NewsFeed() {
@@ -41,18 +41,29 @@ export default function NewsFeed() {
   return (
     <div className="d-flex flex-wrap justify-content-center">
       {posts.map((post, index) => (
-        <div style={newsPreviewStyle}>
-          <div style={{
-            backgroundImage: `url(${getFeaturedImage(post)})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center',
-            height: '195px',
-            width: '100%',
-          }}
+        <div
+          className="bg-dark"
+          style={newsPreviewStyle}
+        >
+          <div
+            className="bg-dark"
+            style={{
+              backgroundImage: `url(${getFeaturedImage(post)})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+              height: '195px',
+              width: '100%',
+            }}
           />
-          <h4 style={{ textAlign: 'left' }}>{parseHtml(post.title.rendered)}</h4>
-          <p style={{ textAlign: 'left' }}>{formatDate(parseISO(post.date), 'LLLL d, yyyy')}</p>
-          <p style={{ textAlign: 'left' }}>{parseHtml(post.excerpt.rendered)}</p>
+          <div style={{
+            overflow: 'hidden',
+            margin: 'auto 20px',
+          }}
+          >
+            <h4 style={{ textAlign: 'left' }}>{parseHtml(post.title.rendered)}</h4>
+            <p style={{ textAlign: 'left' }}>{formatDate(parseISO(post.date), 'LLLL d, yyyy')}</p>
+            <p style={{ textAlign: 'left' }}>{parseHtml(post.excerpt.rendered)}</p>
+          </div>
         </div>
       ))}
       ;

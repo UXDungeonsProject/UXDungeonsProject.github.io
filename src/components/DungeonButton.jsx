@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import DungeonButtonSvg from '../assets/img/dungeon-button.svg';
@@ -6,8 +6,10 @@ import DungeonButtonHighlightSvg from '../assets/img/dungeon-button-highlight.sv
 import SteamIcon from './SteamIcon';
 import YoutubeIcon from './YoutubeIcon';
 
-function DungeonButton({ text, onClick, variant }) {
-  const [isHover, setIsHover] = useState(false);
+function DungeonButton({
+  text, onClick, variant, hover,
+}) {
+  const [isHover, setIsHover] = useState(hover !== null ? hover : false);
 
   const hoverTextColor = 'rgba(238, 163, 53, 0.87)';
   const defaultTextColor = 'rgba(255, 255, 255, 0.87)';
@@ -16,8 +18,16 @@ function DungeonButton({ text, onClick, variant }) {
     setIsHover(true);
   };
   const handleMouseLeave = () => {
-    setIsHover(false);
+    if (!hover) {
+      setIsHover(false);
+    }
   };
+
+  useEffect(() => {
+    if (hover != null) {
+      setIsHover(hover);
+    }
+  }, [hover]);
 
   const DungeonButtonStyle = {
     margin: 'auto',
@@ -78,10 +88,16 @@ function DungeonButton({ text, onClick, variant }) {
   );
 }
 
+DungeonButton.defaultProps = {
+  variant: 'Default',
+  hover: null,
+};
+
 DungeonButton.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  variant: PropTypes.string.isRequired,
+  variant: PropTypes.string,
+  hover: PropTypes.bool,
 };
 
 export default DungeonButton;

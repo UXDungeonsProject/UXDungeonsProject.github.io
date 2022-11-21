@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import parseHtml from 'html-react-parser';
-
 import { parseISO, format as formatDate } from 'date-fns';
-import placeHolderImage from '../assets/img/DUNGEONSofAETHER_logo-optimized.png';
+import Mask from './Mask';
+import placeHolderImage from '../assets/img/placeholder-thumbnail.jpg';
 import DungeonButton from './DungeonButton';
+
+import PaperEdgeMask from '../assets/img/torn-paper-page.svg';
 
 export default function NewsFeed() {
   const [posts, setPosts] = useState([]);
@@ -52,24 +54,27 @@ function NewsPreview({ post }) {
   };
 
   const newsPreviewStyle = {
-    // width: '350px',
-    // minWidth: '350px',
     height: '500px',
     cursor: 'pointer',
+    position: 'relative',
+
   };
 
   const newsPreviewImageStyle = {
     backgroundImage: `url(${getFeaturedImage(post)})`,
-    backgroundSize: 'cover',
+    backgroundSize: isHover ? '110% auto' : '100% auto',
     backgroundPosition: 'center center',
     height: '40%',
     width: '100%',
+    zIndex: '1',
+    transition: '0.2s',
   };
 
   const newsPreviewTextStyle = {
     height: '60%',
-    margin: 'auto 20px',
+    margin: '20px 20px',
     position: 'relative',
+    zIndex: '1',
   };
 
   const positionedBottomCenter = {
@@ -78,33 +83,61 @@ function NewsPreview({ post }) {
     left: '50%',
     WebkitTransform: 'translateX(-50%)',
     transform: 'translateX(-50%)',
+    zIndex: '1',
   };
 
   return (
     <div
-      className="news-preview bg-light"
+      className="news-preview"
       style={newsPreviewStyle}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className="news-preview-image bg-dark"
-        style={newsPreviewImageStyle}
-      />
-      <div
-        className="news-preview-text text-white"
-        style={newsPreviewTextStyle}
+        className="bg-dark"
+        style={{
+          height: '100%',
+          width: '100%',
+          WebkitMaskImage: `url(${PaperEdgeMask})`,
+          maskImage: `url(${PaperEdgeMask})`,
+          WebkitMaskSize: 'cover',
+          maskSize: 'cover',
+          WebkitMaskPosition: 'center',
+          maskPosition: 'center',
+        }}
       >
-
-        <div style={{ height: '90%', overflow: 'hidden' }}>
-          <h4 style={{ textAlign: 'left' }}>{parseHtml(post.title.rendered)}</h4>
-          <p style={{ textAlign: 'left' }}>{formatDate(parseISO(post.date), 'LLLL d, yyyy')}</p>
-          <div style={{ textAlign: 'left' }}>{parseHtml(post.excerpt.rendered)}</div>
+        <div
+          className="news-preview-image bg-dark"
+          style={newsPreviewImageStyle}
+        />
+        <div
+          className="news-preview-text text-white"
+          style={newsPreviewTextStyle}
+        >
+          <div style={{
+            height: '90%',
+            overflow: 'hidden',
+            textAlign: 'left',
+            position: 'relative',
+            zIndex: '1',
+            transition: '0.2s',
+            textShadow: (isHover) ? '0px 0px 6px #FFFFFF80' : 'none',
+          }}
+          >
+            <h3>
+              {parseHtml(post.title.rendered)}
+            </h3>
+            <p className="text-primary" style={{ textShadow: 'none' }}>
+              {formatDate(parseISO(post.date), 'LLLL d, yyyy')}
+            </p>
+            <div>
+              {parseHtml(post.excerpt.rendered)}
+            </div>
+          </div>
         </div>
-
-        <div style={positionedBottomCenter}>
-          <DungeonButton text="Read More" hover={isHover} onClick={() => {}} />
-        </div>
+      </div>
+      <div style={positionedBottomCenter}>
+        <DungeonButton text="Read More" hover={isHover} onClick={() => {}} />
       </div>
     </div>
   );

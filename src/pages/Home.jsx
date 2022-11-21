@@ -7,10 +7,8 @@ import TrailerModal from '../components/TrailerModal';
 import PaperEdgeMask from '../assets/img/paper-edge-mask.svg';
 import PromoBackgroundImage from '../assets/img/dungeons-of-aether-promo-background-recentered.jpg';
 import SceneryBackgroundImage from '../assets/img/dungeons-of-aether-env-concept.jpg';
-import PixelArtBackground from '../assets/img/pixel-art-background.jpg';
 import DungeonsLogo from '../assets/img/DUNGEONSofAETHER_logo-optimized.png';
 import charactersGrouped from '../assets/img/characters_grouped.png';
-
 import DungeonButton from '../components/DungeonButton';
 import Footer from '../components/Footer';
 import NewsFeed from '../components/NewsFeed';

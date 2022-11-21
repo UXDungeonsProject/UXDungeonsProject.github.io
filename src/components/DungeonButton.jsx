@@ -32,13 +32,24 @@ function DungeonButton({
   const DungeonButtonStyle = {
     margin: 'auto',
     width: '175px',
+    WebkitFilter: (isHover) ? 'opacity(0)' : 'opacity(1)',
+    filter: (isHover) ? 'opacity(0)' : 'opacity(1)',
+    cursor: 'pointer',
+    gridColumn: '1',
+    gridRow: '1',
+    zIndex: '1',
+    transition: '0.2s',
+  };
+
+  const DungeonButtonHighlightStyle = {
+    margin: 'auto',
+    width: '175px',
     WebkitFilter: 'drop-shadow(3px 5px 2px rgb(0 0 0 / 0.8))',
     filter: 'drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4))',
     cursor: 'pointer',
     gridColumn: '1',
     gridRow: '1',
-    zIndex: '1',
-    transition: '0.1s',
+    zIndex: '0',
   };
 
   const DungeonButtonTextStyle = {
@@ -47,7 +58,7 @@ function DungeonButton({
     gridRow: '1',
     zIndex: '2',
     pointerEvents: 'none',
-    transition: '0.1s',
+    transition: '0.2s',
     color: (isHover) ? hoverTextColor : defaultTextColor,
     textShadow: '1px 1px 5px rgba(0, 0, 0, 0.5)',
   };
@@ -74,15 +85,17 @@ function DungeonButton({
           {' '}
           {getIcon(variant)}
         </p>
+        <img src={DungeonButtonHighlightSvg} style={DungeonButtonHighlightStyle} alt="Button" />
         <input
           type="image"
-          src={(isHover) ? DungeonButtonHighlightSvg : DungeonButtonSvg}
+          src={DungeonButtonSvg}
           alt="Button"
           style={DungeonButtonStyle}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onClick={onClick}
         />
+
       </div>
     </div>
   );

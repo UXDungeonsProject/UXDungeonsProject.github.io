@@ -49,6 +49,8 @@
 .news-preview {
     width: 25%;
     margin: 10px;
+    height: 500px;
+    cursor: pointer;
 }
 
 @media (max-width: 1375px) {
@@ -89,6 +91,8 @@
     }
     .news-preview {
         width: 80%;
+        margin: 0px;
+        margin-bottom: 100px;
     }
 }
 

@@ -6,8 +6,15 @@
 $light: #39240c;
 $dark: #281d17;
 
+
 //import Bootstrap css
 @import 'bootstrap/scss/bootstrap.scss';
+
+.modal {
+    --bs-modal-bg: #00000;
+    --bs-modal-padding: 3rem;
+    --bs-modal-border-width: 0px;
+}
 
 .modal-dialog {
     --bs-modal-width: 1024px;

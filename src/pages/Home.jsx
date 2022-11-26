@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import Mask from '../components/Mask';
 import '../App.css';
 
@@ -70,8 +69,8 @@ function AboutSection() {
   return (
     <TornPaperMask>
       <GradientMask>
-        <div className="about-bg" style={aboutBgStyle}>
-          <div className="about div1">
+        <div className="learn-more-bg" style={aboutBgStyle}>
+          <div className="learn-more div1">
             <img
               src={charactersGrouped}
               alt="Group of Characters"
@@ -83,15 +82,15 @@ function AboutSection() {
               }}
             />
           </div>
-          <div className="about div2">
+          <div className="learn-more div2">
             <div style={{ maxWidth: '550px', margin: 'auto' }}>
               <h4 style={{ marginBottom: '0.25rem' }}>{aboutText[0]}</h4>
               <h1 style={{ lineHeight: '1' }}>{aboutText[1]}</h1>
               <p style={{ fontSize: '16px' }}>{aboutText[2]}</p>
             </div>
           </div>
-          <div className="about div3">
-            <DungeonButton text="Learn More" onClick={() => {}} />
+          <div className="learn-more div3">
+            <DungeonButton text="Learn More" path="/about" />
           </div>
         </div>
       </GradientMask>
@@ -123,10 +122,6 @@ function GradientMask({ children }) {
   );
 }
 
-GradientMask.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
 function TornPaperMask({ children }) {
   return (
     <div style={{ marginTop: '-5rem' }}>
@@ -136,9 +131,5 @@ function TornPaperMask({ children }) {
     </div>
   );
 }
-
-TornPaperMask.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Home;

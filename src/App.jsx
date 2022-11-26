@@ -4,11 +4,10 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home';
-import Characters from './pages/Characters';
 import News from './pages/News';
-import Modes from './pages/Modes';
 
 import NavBar from './components/NavBar';
+import About from './pages/About';
 
 function App() {
   const navbarLogo = useMemo(
@@ -31,19 +30,14 @@ function App() {
         element: <Home />,
       },
       {
-        title: 'Characters',
-        path: '/characters',
-        element: <Characters />,
+        title: 'About',
+        path: '/about',
+        element: <About />,
       },
       {
         title: 'News',
         path: '/news',
         element: <News />,
-      },
-      {
-        title: 'Modes',
-        path: '/modes',
-        element: <Modes />,
       },
     ],
     [],

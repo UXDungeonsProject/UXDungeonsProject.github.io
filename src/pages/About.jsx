@@ -32,7 +32,10 @@ function AboutSection() {
 
   return (
     <GradientMask>
-      <div className="about-bg" style={aboutBgStyle}>
+      <div
+        className="about-bg"
+        style={aboutBgStyle}
+      >
         <div className="about div1">
           <img
             src={charactersGrouped}

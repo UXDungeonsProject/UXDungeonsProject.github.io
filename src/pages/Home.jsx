@@ -35,19 +35,38 @@ function LogoSection() {
     height: '900px',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
+    marginTop: '-80px',
   };
 
   return (
     <GradientMask>
-      <div className="promo-bg d-flex flex-column justify-content-center" style={promoBgStyle}>
+      <div
+        className="promo-bg d-flex flex-column justify-content-center"
+        style={promoBgStyle}
+      >
         <div style={{ height: '100px' }} />
         <div className="flex-fill">
-          <img className="dungeons-logo" src={DungeonsLogo} alt="Dungeons of Aether Logo" />
+          <img
+            className="dungeons-logo"
+            src={DungeonsLogo}
+            alt="Dungeons of Aether Logo"
+          />
         </div>
         <div className="flex-fill d-flex justify-content-center">
-          <TrailerModal show={show} handleClose={handleClose} />
-          <DungeonButton variant="Youtube" text="Trailer" onClick={handleShow} />
-          <DungeonButton variant="Steam" text="Wishlist" onClick={() => {}} />
+          <TrailerModal
+            show={show}
+            handleClose={handleClose}
+          />
+          <DungeonButton
+            variant="Youtube"
+            text="Trailer"
+            onClick={handleShow}
+          />
+          <DungeonButton
+            variant="Steam"
+            text="Wishlist"
+            onClick={() => {}}
+          />
         </div>
         <div className="flex-fill" />
         <div className="flex-fill" />
@@ -70,7 +89,10 @@ function AboutSection() {
   return (
     <TornPaperMask>
       <GradientMask>
-        <div className="about-bg" style={aboutBgStyle}>
+        <div
+          className="about-bg"
+          style={aboutBgStyle}
+        >
           <div className="about div1">
             <img
               src={charactersGrouped}
@@ -91,7 +113,10 @@ function AboutSection() {
             </div>
           </div>
           <div className="about div3">
-            <DungeonButton text="Learn More" onClick={() => {}} />
+            <DungeonButton
+              text="Learn More"
+              onClick={() => {}}
+            />
           </div>
         </div>
       </GradientMask>
@@ -108,7 +133,10 @@ function NewsSection() {
 
   return (
     <TornPaperMask>
-      <div className="home-news-feed" style={newsBgStyle}>
+      <div
+        className="home-news-feed"
+        style={newsBgStyle}
+      >
         <NewsFeed />
       </div>
     </TornPaperMask>
@@ -130,9 +158,7 @@ GradientMask.propTypes = {
 function TornPaperMask({ children }) {
   return (
     <div style={{ marginTop: '-5rem' }}>
-      <Mask mask={`url(${PaperEdgeMask})`}>
-        {children}
-      </Mask>
+      <Mask mask={`url(${PaperEdgeMask})`}>{children}</Mask>
     </div>
   );
 }

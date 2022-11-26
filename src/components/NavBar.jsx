@@ -9,13 +9,20 @@ import logoImage from '../assets/img/aetherstudios-logo-small.webp';
 
 function NavBar({ pages }) {
   return (
-    <div style={{
-      position: 'sticky', top: '0', width: '100%', zIndex: 1,
-    }}
+    <div
+      style={{
+        position: 'sticky',
+        top: '0',
+        width: '100%',
+        zIndex: 1,
+      }}
     >
-      <Navbar expand="md" className="bg-light">
+      <Navbar expand="md">
         <Container>
-          <a href="https://aetherstudios.com" className="nav-logo">
+          <a
+            href="https://aetherstudios.com"
+            className="nav-logo"
+          >
             <img
               src={`${logoImage}`}
               alt="Aether Studios Logo"
@@ -27,7 +34,13 @@ function NavBar({ pages }) {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               {pages.map((page) => (
-                <Link key={page.title} to={page.path} className="nav-link">{page.title}</Link>
+                <Link
+                  key={page.title}
+                  to={page.path}
+                  className="nav-link"
+                >
+                  {page.title}
+                </Link>
               ))}
             </Nav>
           </Navbar.Collapse>
@@ -38,10 +51,12 @@ function NavBar({ pages }) {
 }
 
 NavBar.propTypes = {
-  pages: PropTypes.arrayOf(PropTypes.shape({
-    path: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  })).isRequired,
+  pages: PropTypes.arrayOf(
+    PropTypes.shape({
+      path: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default NavBar;

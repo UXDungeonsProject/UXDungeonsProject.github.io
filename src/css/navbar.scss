@@ -1,13 +1,23 @@
 /* navbar */
+@import url('https://fonts.googleapis.com/css?family=Bungee');
 
 .nav-link {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.87);
     position: relative;
-    top: 5px;
+    font-family: 'Bungee', Regular;
+    margin-right: 20px;
 }
   
 .nav-link:hover {
     color: #ff993f;
 }
+
+.navbar,
+.navbar-default {
+    background-image: url("../assets/img/header-bg.svg") !important;
+    align-items: center;
+    width: 100%;
+}
+

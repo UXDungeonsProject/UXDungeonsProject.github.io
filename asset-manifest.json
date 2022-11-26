@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d4724cf6.css",
-    "main.js": "/static/js/main.72f7fa29.js",
+    "main.css": "/static/css/main.395ae829.css",
+    "main.js": "/static/js/main.35bf2f38.js",
     "static/media/dungeons-of-aether-promo-background-recentered.jpg": "/static/media/dungeons-of-aether-promo-background-recentered.f9bb221491dc0cd7054e.jpg",
     "static/media/characters_grouped.png": "/static/media/characters_grouped.1b7fba15739334018220.png",
     "static/media/dungeons-of-aether-env-concept.jpg": "/static/media/dungeons-of-aether-env-concept.56b72c7f8b8ee054b559.jpg",
@@ -13,11 +13,11 @@
     "static/media/dungeon-button.svg": "/static/media/dungeon-button.ce134ed89c05eb60b17995b649946914.svg",
     "static/media/dungeon-button-highlight.svg": "/static/media/dungeon-button-highlight.16879e0a7881267258ea48f8d07fe783.svg",
     "index.html": "/index.html",
-    "main.d4724cf6.css.map": "/static/css/main.d4724cf6.css.map",
-    "main.72f7fa29.js.map": "/static/js/main.72f7fa29.js.map"
+    "main.395ae829.css.map": "/static/css/main.395ae829.css.map",
+    "main.35bf2f38.js.map": "/static/js/main.35bf2f38.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4724cf6.css",
-    "static/js/main.72f7fa29.js"
+    "static/css/main.395ae829.css",
+    "static/js/main.35bf2f38.js"
   ]
 }

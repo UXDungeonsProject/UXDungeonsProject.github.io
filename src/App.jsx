@@ -5,12 +5,10 @@ import Mask from './components/Mask';
 import './App.css';
 
 import Home from './pages/Home';
-import Characters from './pages/Characters';
 import News from './pages/News';
-import Modes from './pages/Modes';
-import PaperEdgeMask from './assets/img/paper-edge-mask.svg';
 
 import NavBar from './components/NavBar';
+import About from './pages/About';
 
 function App() {
   const navbarLogo = useMemo(() => {
@@ -26,28 +24,26 @@ function App() {
       />
     </a>;
   });
-  const navigationItems = useMemo(() => [
-    {
-      title: 'Home',
-      path: '/',
-      element: <Home />,
-    },
-    {
-      title: 'Characters',
-      path: '/characters',
-      element: <Characters />,
-    },
-    {
-      title: 'News',
-      path: '/News',
-      element: <News />,
-    },
-    {
-      title: 'Modes',
-      path: '/modes',
-      element: <Modes />,
-    },
-  ]);
+  const navigationItems = useMemo(
+    () => [
+      {
+        title: 'Home',
+        path: '/',
+        element: <Home />,
+      },
+      {
+        title: 'About',
+        path: '/about',
+        element: <About />,
+      },
+      {
+        title: 'News',
+        path: '/news',
+        element: <News />,
+      },
+    ],
+    [],
+  );
   return (
     <div className="App">
       <NavBar

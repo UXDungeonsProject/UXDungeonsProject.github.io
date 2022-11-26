@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 import DungeonButtonSvg from '../assets/img/dungeon-button.svg';
 import DungeonButtonHighlightSvg from '../assets/img/dungeon-button-highlight.svg';
 import SteamIcon from './SteamIcon';
 import YoutubeIcon from './YoutubeIcon';
 
 function DungeonButton({
-  text, onClick, variant, hover,
+  text, onClick, variant, hover, path,
 }) {
   const [isHover, setIsHover] = useState(hover !== null ? hover : false);
 
@@ -28,18 +27,6 @@ function DungeonButton({
       setIsHover(hover);
     }
   }, [hover]);
-
-  const DungeonButtonStyle = {
-    margin: 'auto',
-    width: '175px',
-    WebkitFilter: (isHover) ? 'opacity(0)' : 'opacity(1)',
-    filter: (isHover) ? 'opacity(0)' : 'opacity(1)',
-    cursor: 'pointer',
-    gridColumn: '1',
-    gridRow: '1',
-    zIndex: '1',
-    transition: '0.2s',
-  };
 
   const DungeonButtonHighlightStyle = {
     margin: 'auto',
@@ -76,7 +63,6 @@ function DungeonButton({
     }
     return null;
   };
-
   return (
     <div className="dungeon-button">
       <div className="d-grid">
@@ -86,31 +72,56 @@ function DungeonButton({
           {getIcon(variant)}
         </p>
         <img src={DungeonButtonHighlightSvg} style={DungeonButtonHighlightStyle} alt="Button" />
-        <input
-          type="image"
-          src={DungeonButtonSvg}
-          alt="Button"
-          style={DungeonButtonStyle}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+        <ButtonElement
           onClick={onClick}
+          isHover={isHover}
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          path={path}
         />
-
       </div>
     </div>
   );
 }
 
-DungeonButton.defaultProps = {
-  variant: 'Default',
-  hover: null,
-};
+function ButtonElement({
+  onClick, isHover, handleMouseEnter, handleMouseLeave, path,
+}) {
+  const DungeonButtonStyle = {
+    margin: 'auto',
+    width: '175px',
+    WebkitFilter: (isHover) ? 'opacity(0)' : 'opacity(1)',
+    filter: (isHover) ? 'opacity(0)' : 'opacity(1)',
+    cursor: 'pointer',
+    gridColumn: '1',
+    gridRow: '1',
+    zIndex: '1',
+    transition: '0.2s',
+  };
 
-DungeonButton.propTypes = {
-  text: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  variant: PropTypes.string,
-  hover: PropTypes.bool,
-};
+  if (path) {
+    return (
+      <Link
+        style={DungeonButtonStyle}
+        to={path}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <img style={DungeonButtonStyle} src={DungeonButtonSvg} alt="Button" />
+      </Link>
+    );
+  }
+  return (
+    <input
+      type="image"
+      src={DungeonButtonSvg}
+      alt="Button"
+      style={DungeonButtonStyle}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={onClick}
+    />
+  );
+}
 
 export default DungeonButton;

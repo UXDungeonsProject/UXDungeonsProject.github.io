@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Mask from '../components/Mask';
 import '../App.css';
 
@@ -31,54 +32,61 @@ function AboutSection() {
   };
 
   return (
-    <GradientMask>
-      <div
-        className="about-bg"
-        style={aboutBgStyle}
-      >
-        <div className="about div1">
-          <img
-            src={charactersGrouped}
-            alt="Group of Characters"
-            style={{
-              float: 'right',
-              width: '100%',
-              minWidth: '350px',
-              maxWidth: '830px',
-            }}
-          />
-        </div>
-        <div className="about div2">
-          <div style={{ maxWidth: '550px', margin: 'auto' }}>
-            <h4 style={{ marginBottom: '0.25rem' }}>{aboutText[0]}</h4>
-            <h1 style={{ lineHeight: '1' }}>{aboutText[1]}</h1>
-            <p style={{ fontSize: '16px' }}>{aboutText[2]}</p>
-          </div>
-        </div>
-        <div className="about div3">
-          <div style={{ maxWidth: '550px', margin: 'auto' }}>
+    <motion.div
+      className="Home"
+      initial={{ opacity: 0, marginTop: '20px', transitionDuration: 0.1 }}
+      animate={{ opacity: 1, marginTop: '0px' }}
+      exit={{ opacity: 0, marginTop: '0px' }}
+    >
+      <GradientMask>
+        <div
+          className="about-bg"
+          style={aboutBgStyle}
+        >
+          <div className="about div1">
             <img
-              style={{ margin: 'auto', display: 'block', width: '300px' }}
-              src={DungeonsLogo}
-              alt="Dungeons of Aether Logo"
+              src={charactersGrouped}
+              alt="Group of Characters"
+              style={{
+                float: 'right',
+                width: '100%',
+                minWidth: '350px',
+                maxWidth: '830px',
+              }}
             />
-            <p style={{ marginBottom: '0.25rem' }}>
-              {aboutText[3]}
-              <a
-                className="text-primary"
-                href="https://twitter.com/ampersandbear"
-                rel="noopener noreferrer"
-                target="_blank"
-                style={{ textDecoration: 'none' }}
-              >
-                {aboutText[4]}
-              </a>
-              {aboutText[5]}
-            </p>
+          </div>
+          <div className="about div2">
+            <div style={{ maxWidth: '550px', margin: 'auto' }}>
+              <h4 style={{ marginBottom: '0.25rem' }}>{aboutText[0]}</h4>
+              <h1 style={{ lineHeight: '1' }}>{aboutText[1]}</h1>
+              <p style={{ fontSize: '16px' }}>{aboutText[2]}</p>
+            </div>
+          </div>
+          <div className="about div3">
+            <div style={{ maxWidth: '550px', margin: 'auto' }}>
+              <img
+                style={{ margin: 'auto', display: 'block', width: '300px' }}
+                src={DungeonsLogo}
+                alt="Dungeons of Aether Logo"
+              />
+              <p style={{ marginBottom: '0.25rem' }}>
+                {aboutText[3]}
+                <a
+                  className="text-primary"
+                  href="https://twitter.com/ampersandbear"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  style={{ textDecoration: 'none' }}
+                >
+                  {aboutText[4]}
+                </a>
+                {aboutText[5]}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </GradientMask>
+      </GradientMask>
+    </motion.div>
   );
 }
 

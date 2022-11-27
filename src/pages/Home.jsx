@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Mask from '../components/Mask';
 import '../App.css';
 
@@ -38,39 +39,46 @@ function LogoSection() {
   };
 
   return (
-    <GradientMask>
-      <div
-        className="promo-bg d-flex flex-column justify-content-center"
-        style={promoBgStyle}
-      >
-        <div style={{ height: '100px' }} />
-        <div className="flex-fill">
-          <img
-            className="dungeons-logo"
-            src={DungeonsLogo}
-            alt="Dungeons of Aether Logo"
-          />
+    <motion.div
+      className="Home"
+      initial={{ opacity: 0, marginTop: '20px', transitionDuration: 0.1 }}
+      animate={{ opacity: 1, marginTop: '0px' }}
+      exit={{ opacity: 0, marginTop: '0px' }}
+    >
+      <GradientMask>
+        <div
+          className="promo-bg d-flex flex-column justify-content-center"
+          style={promoBgStyle}
+        >
+          <div style={{ height: '100px' }} />
+          <div className="flex-fill">
+            <img
+              className="dungeons-logo"
+              src={DungeonsLogo}
+              alt="Dungeons of Aether Logo"
+            />
+          </div>
+          <div className="flex-fill d-flex justify-content-center">
+            <TrailerModal
+              show={show}
+              handleClose={handleClose}
+            />
+            <DungeonButton
+              variant="Youtube"
+              text="Trailer"
+              onClick={handleShow}
+            />
+            <DungeonButton
+              variant="Steam"
+              text="Wishlist"
+              onClick={() => {}}
+            />
+          </div>
+          <div className="flex-fill" />
+          <div className="flex-fill" />
         </div>
-        <div className="flex-fill d-flex justify-content-center">
-          <TrailerModal
-            show={show}
-            handleClose={handleClose}
-          />
-          <DungeonButton
-            variant="Youtube"
-            text="Trailer"
-            onClick={handleShow}
-          />
-          <DungeonButton
-            variant="Steam"
-            text="Wishlist"
-            onClick={() => {}}
-          />
-        </div>
-        <div className="flex-fill" />
-        <div className="flex-fill" />
-      </div>
-    </GradientMask>
+      </GradientMask>
+    </motion.div>
   );
 }
 

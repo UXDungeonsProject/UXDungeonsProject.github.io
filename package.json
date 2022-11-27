@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.2",
     "date-fns": "^2.29.3",
+    "framer-motion": "^7.6.12",
     "html-react-parser": "^3.0.4",
     "node-sass": "^7.0.3",
     "prop-types": "^15.8.1",

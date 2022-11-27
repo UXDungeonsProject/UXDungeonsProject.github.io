@@ -62,7 +62,7 @@ function NewsPreview({ post }) {
 
   const newsPreviewImageStyle = {
     backgroundImage: `url(${getFeaturedImage(post)})`,
-    backgroundSize: isHover ? '110% auto' : '100% auto',
+    backgroundSize: isHover ? '120%' : '130%',
     backgroundPosition: 'center center',
     height: '40%',
     width: '100%',

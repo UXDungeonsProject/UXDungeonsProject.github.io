@@ -14,11 +14,20 @@
     color: #ff993f;
 }
 
-.navbar,
-.navbar-default {
-    background-image: url("../assets/img/header-bg.svg") !important;
-    align-items: center;
-    width: 100%;
-    height: 9vh;
+@media (max-width: 766px) {
+    .navbar,
+    .navbar-default {
+        background-color: $light;
+    }
+}
+
+@media (min-width: 767px) {
+    .navbar,
+    .navbar-default {
+        background-image: url("../assets/img/header-bg.svg");
+        align-items: center;
+        width: 100%;
+        height: 9vh;
+    }
 }
 

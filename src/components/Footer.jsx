@@ -28,6 +28,8 @@ function Footer() {
         <a
           style={footerIcon}
           href="https://store.steampowered.com/app/1668290/Dungeons_of_Aether/"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <img
             style={footerIcon}
@@ -35,7 +37,11 @@ function Footer() {
             alt="steam logo"
           />
         </a>
-        <a href="https://twitter.com/StudiosOfAether">
+        <a
+          href="https://twitter.com/StudiosOfAether"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img
             style={footerIcon}
             src={`${twitter}`}

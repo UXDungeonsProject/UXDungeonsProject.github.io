@@ -3,12 +3,13 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-
 import { AnimatePresence } from 'framer-motion';
+import ScrollToTop from './ScrollToTop';
 
 function AnimatedRoutes({ routes }) {
   return (
     <AnimatePresence>
+      <ScrollToTop />
       <Routes>
         {routes.map(({ title, path, element }) => (
           <Route

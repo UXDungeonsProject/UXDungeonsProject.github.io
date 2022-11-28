@@ -36,6 +36,14 @@
     text-shadow: 2px 2px 5px #000000;
 }
 
+.whitetext {
+    color: white
+}
+
+.largermargins {
+    margin-bottom: 5rem
+}
+
 @media (max-width: 1200px) {
     .about-bg {
         grid-template-rows: repeat(4, 150px);

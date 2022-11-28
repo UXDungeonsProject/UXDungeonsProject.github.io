@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -34,13 +34,13 @@ function NavBar({ pages }) {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               {pages.map((page) => (
-                <Link
+                <NavLink
                   key={page.title}
                   to={page.path}
-                  className="nav-link"
+                  className={({ isActive }) => `nav-link${!isActive ? ' ' : ' selected'}`}
                 >
                   {page.title}
-                </Link>
+                </NavLink>
               ))}
             </Nav>
           </Navbar.Collapse>

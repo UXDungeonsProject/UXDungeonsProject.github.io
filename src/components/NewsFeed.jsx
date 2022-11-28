@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import parseHtml from 'html-react-parser';
 import { parseISO, format as formatDate } from 'date-fns';
-import Mask from './Mask';
 import placeHolderImage from '../assets/img/placeholder-thumbnail.jpg';
 import DungeonButton from './DungeonButton';
 
@@ -27,7 +26,7 @@ export default function NewsFeed() {
 
   return (
     <div className="d-flex flex-wrap justify-content-center">
-      {posts.map((post, index) => (
+      {posts.map((post) => (
         <NewsPreview key={post.title.rendered} post={post} />
       ))}
     </div>

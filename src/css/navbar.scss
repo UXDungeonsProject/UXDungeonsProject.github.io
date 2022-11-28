@@ -9,8 +9,16 @@
     font-family: 'Bungee', Regular;
     margin-right: 20px;
 }
+
+.nav-link.selected {
+    color: $primary;
+}
   
 .nav-link:hover {
+    color: $primary;
+}
+
+.nav-link:active {
     color: $primary;
 }
 

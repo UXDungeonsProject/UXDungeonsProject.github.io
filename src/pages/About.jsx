@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 import Mask from '../components/Mask';
 import '../App.css';
 
@@ -6,11 +7,20 @@ import DungeonsLogo from '../assets/img/DUNGEONSofAETHER_logo-optimized.png';
 import SceneryBackgroundImage from '../assets/img/dungeons-of-aether-env-concept.jpg';
 import Footer from '../components/Footer';
 import charactersGrouped from '../assets/img/characters_grouped.png';
+import Artemis from '../assets/img/Dungeon_steampage_heroes_artemis.png';
+import Fleet from '../assets/img/Dungeon_steampage_heroes_fleet.png';
+import Hamir from '../assets/img/Dungeon_steampage_heroes_hamir.png';
+import Slade from '../assets/img/Dungeon_steampage_heroes_slade.png';
+import Story from '../assets/img/Dungeon_steampage_storymode.png';
+import Challenge from '../assets/img/Dungeon_steampage_challengedungeons.png';
+import HamirGif from '../assets/img/hamir-geode.gif';
 
 function About() {
   return (
     <div className="home bg-dark">
       <AboutSection />
+      <CharacterSection />
+      <ModeSection />
       <Footer />
     </div>
   );
@@ -79,6 +89,143 @@ function AboutSection() {
         </div>
       </div>
     </GradientMask>
+  );
+}
+
+function CharacterSection() {
+  return (
+    <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={Fleet}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>Fleet</h3>
+          <p>
+            Fleet is the self-proclaimed protector of her hometown of Julesvale,
+            although she&apos;s seen as a clumsy
+            menace more than a hero. As the jack of all trades,
+            Fleet is a great character for learning the combat system.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={Artemis}
+          alt="Second slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Artemis</h3>
+          <p>
+            Artemis is a renowned general in the Fire Mora who often fought alongside Zetterburn.
+            She was sent to Julesvale by Emperor Loxodont on a secret mission.
+            Artemis can heal her wounds in battle, showing off her innate regeneration abilities.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={Slade}
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Slade</h3>
+          <p>
+            Slade is a pirate from the far-off Polekai Islands. He has made his way to
+            Julesvale hunting a mysterious rare mineral unique to Julesvale.
+            Rumor has it the mineral is key to saving his homeland.
+            Slade&apos;s style and swagger allow him to dodge attacks
+            entirely if his speed is high enough.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <div>
+          <img
+            className="d-block w-100"
+            src={Hamir}
+            alt="Fourth slide"
+          />
+        </div>
+        <Carousel.Caption>
+          <h3>Hamir</h3>
+          <p>
+            Hamir is a former Wall Runner from the mighty Rock Wall.
+            He has made his way to Julesvale in exile after losing his trusted partner.
+            Hamir now finds himself looking for a purpose and the courage to carry on.
+            Hamir is strong and sturdy, weathering blows until the time is right to crush his foes.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  );
+}
+
+function ModeSection() {
+  return (
+    <Carousel>
+      <Carousel.Item>
+        <div className="largermargins">
+          <img
+            className="d-block w-100"
+            src={Story}
+            alt="First slide"
+          />
+          <p className="whitetext">
+            The world of Aether is expanding and Dungeons of Aether adds a new,
+            fascinating facet to the ever-expanding lore!
+            Travel to the steam-punk town of Julesvale and
+            brave the sprawling caverns underneath it.
+            In Story Mode, you&apos;ll play a roguelite adventure
+            that has you starting each dive from town.
+            There you can interact with towns folk and spend
+            your hard-earned gold to gear up for your next run.
+          </p>
+          <img
+            className="d-block"
+            src={HamirGif}
+            alt="HamirGif"
+          />
+          <p className="whitetext">
+            Each of the dungeons you&apos;ll dive into
+            have new challenges to face and rewards to collect.
+            As you dive into Julesvale Mines, the Lava Caves,
+            the Underground Oasis and the Mineral Deposits,
+            you&apos;ll be able to collect Journal Entries that
+            reveal even more about Julesvale and its legendary past.
+          </p>
+        </div>
+      </Carousel.Item>
+      <Carousel.Item>
+        <div className="largermargins">
+          <img
+            className="d-block w-100"
+            src={Challenge}
+            alt="Second slide"
+          />
+          <p className="whitetext">
+            Story Mode gives you a chance to casually prepare,
+            interact with NPCs, and savor the exploration of the world,
+            In Challenge Dungeons it&apos;s all up to you!.
+            The Challenge Dungeons also feature a leaderboard based on how
+            much gold you have at the end of the run.
+            Will you spend your gold to make sure you can get through or are you greedy?
+          </p>
+          <p className="whitetext">
+            For those of you looking for true roguelike difficulty,
+            the Challenge Dungeons are where you will want to test your skills.
+            Each Challenge Dungeon is randomly generated with unique rules and starting equipment.
+            Your mission is to go through all of the biomes in the game in a single run.
+          </p>
+        </div>
+      </Carousel.Item>
+    </Carousel>
   );
 }
 

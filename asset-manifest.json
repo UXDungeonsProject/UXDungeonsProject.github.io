@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e6e11f5.css",
-    "main.js": "/static/js/main.0b851235.js",
+    "main.css": "/static/css/main.ff045395.css",
+    "main.js": "/static/js/main.e93f3a84.js",
     "static/media/hamir-geode.gif": "/static/media/hamir-geode.f21eb14712e8b4d0baf5.gif",
     "static/media/dungeons-of-aether-promo-background-recentered.jpg": "/static/media/dungeons-of-aether-promo-background-recentered.f9bb221491dc0cd7054e.jpg",
     "static/media/characters_grouped.png": "/static/media/characters_grouped.1b7fba15739334018220.png",
@@ -17,11 +17,11 @@
     "static/media/dungeon-button-highlight.svg": "/static/media/dungeon-button-highlight.16879e0a7881267258ea48f8d07fe783.svg",
     "static/media/footer-twitter.svg": "/static/media/footer-twitter.991d4c95ea1d69cbcf870019c1633dc3.svg",
     "index.html": "/index.html",
-    "main.2e6e11f5.css.map": "/static/css/main.2e6e11f5.css.map",
-    "main.0b851235.js.map": "/static/js/main.0b851235.js.map"
+    "main.ff045395.css.map": "/static/css/main.ff045395.css.map",
+    "main.e93f3a84.js.map": "/static/js/main.e93f3a84.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e6e11f5.css",
-    "static/js/main.0b851235.js"
+    "static/css/main.ff045395.css",
+    "static/js/main.e93f3a84.js"
   ]
 }

@@ -24,7 +24,7 @@ function App() {
       },
       {
         title: 'News',
-        path: '/news',
+        path: '/news/*',
         element: <News />,
       },
     ],

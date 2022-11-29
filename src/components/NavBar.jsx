@@ -1,13 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import logoImage from '../assets/img/aetherstudios-logo-small.webp';
 
+function checkToHideNews(pages) {
+  const location = useLocation();
+  const re = /^\/news\/[^*]+$/;
+  const hideNews = re.test(location.pathname);
+
+  if (hideNews) {
+    return pages.filter((page) => page.path !== '/news/*');
+  }
+  return pages;
+}
+
 function NavBar({ pages }) {
+  const navPages = checkToHideNews(pages);
+
   return (
     <div
       style={{
@@ -33,7 +46,7 @@ function NavBar({ pages }) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              {pages.map((page) => (
+              {navPages.map((page) => (
                 <NavLink
                   key={page.title}
                   to={page.path}

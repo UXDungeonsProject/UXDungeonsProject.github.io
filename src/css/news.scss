@@ -1,0 +1,29 @@
+
+.news-post {
+    background-color: $dark;
+    width: 50%;
+}
+
+@media (max-width: 1200px) {
+    .news-post {
+        width: 65%;
+    }
+}
+
+@media (max-width: 980px) {
+    .news-post {
+        width: 75%;
+    }
+}
+
+@media (max-width: 767px) {
+    .news-post {
+        width: 85%;
+    }
+}
+
+@media (max-width: 400px) {
+    .news-post {
+        width: 100%;
+    }
+}

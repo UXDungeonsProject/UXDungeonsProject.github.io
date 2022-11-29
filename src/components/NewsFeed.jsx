@@ -1,33 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import parseHtml from 'html-react-parser';
+import { Link } from 'react-router-dom';
 import { parseISO, format as formatDate } from 'date-fns';
-import placeHolderImage from '../assets/img/placeholder-thumbnail.jpg';
 import DungeonButton from './DungeonButton';
-
+import usePosts from '../hooks/usePosts';
+import { getFeaturedImage, titleToPath } from '../functions/NewsFunctions';
 import PaperEdgeMask from '../assets/img/torn-paper-page.svg';
 
 export default function NewsFeed() {
-  const [posts, setPosts] = useState([]);
+  const { posts } = usePosts();
 
-  useEffect(() => {
-    async function loadPosts() {
-      const response = await fetch('https://public-api.wordpress.com/wp/v2/sites/dungeonsofaether.wordpress.com/posts');
-      if (!response.ok) {
-        // oops! something went wrong
-        return;
-      }
-
-      const fetchedPosts = await response.json();
-      setPosts(fetchedPosts);
-    }
-
-    loadPosts();
-  }, []);
-
+  if (posts.status === 'fetching') {
+    return (
+      <div />
+    );
+  }
   return (
     <div className="d-flex flex-wrap justify-content-center">
-      {posts.map((post) => (
-        <NewsPreview key={post.title.rendered} post={post} />
+      {posts.arr.map((post) => (
+        <NewsPreview key={post.id} post={post} />
       ))}
     </div>
   );
@@ -35,15 +26,6 @@ export default function NewsFeed() {
 
 function NewsPreview({ post }) {
   const [isHover, setIsHover] = useState(false);
-
-  const getFeaturedImage = (newsPost) => {
-    if (newsPost && newsPost.jetpack_featured_media_url) {
-      if (newsPost.jetpack_featured_media_url.length > 0) {
-        return newsPost.jetpack_featured_media_url;
-      }
-    }
-    return placeHolderImage;
-  };
 
   const handleMouseEnter = () => {
     setIsHover(true);
@@ -56,7 +38,7 @@ function NewsPreview({ post }) {
     height: '500px',
     cursor: 'pointer',
     position: 'relative',
-
+    textDecoration: 'none',
   };
 
   const newsPreviewImageStyle = {
@@ -86,7 +68,8 @@ function NewsPreview({ post }) {
   };
 
   return (
-    <div
+    <Link
+      to={`/news/${titleToPath(post.title.rendered)}`}
       className="news-preview"
       style={newsPreviewStyle}
       onMouseEnter={handleMouseEnter}
@@ -119,11 +102,9 @@ function NewsPreview({ post }) {
             textAlign: 'left',
             position: 'relative',
             zIndex: '1',
-            transition: '0.2s',
-            textShadow: (isHover) ? '0px 0px 6px #FFFFFF80' : 'none',
           }}
           >
-            <h3>
+            <h3 style={{ textShadow: (isHover) ? '0px 0px 6px #FFFFFF80' : 'none', transition: '0.2s' }}>
               {parseHtml(post.title.rendered)}
             </h3>
             <p className="text-primary" style={{ textShadow: 'none' }}>
@@ -138,6 +119,6 @@ function NewsPreview({ post }) {
       <div style={positionedBottomCenter}>
         <DungeonButton text="Read More" hover={isHover} onClick={() => {}} />
       </div>
-    </div>
+    </Link>
   );
 }

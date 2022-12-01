@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ff045395.css",
-    "main.js": "/static/js/main.e93f3a84.js",
+    "main.css": "/static/css/main.5e512ec8.css",
+    "main.js": "/static/js/main.1a0d894a.js",
     "static/media/hamir-geode.gif": "/static/media/hamir-geode.f21eb14712e8b4d0baf5.gif",
     "static/media/dungeons-of-aether-promo-background-recentered.jpg": "/static/media/dungeons-of-aether-promo-background-recentered.f9bb221491dc0cd7054e.jpg",
     "static/media/characters_grouped.png": "/static/media/characters_grouped.1b7fba15739334018220.png",
@@ -9,6 +9,10 @@
     "static/media/DUNGEONSofAETHER_logo-optimized.png": "/static/media/DUNGEONSofAETHER_logo-optimized.01cb7666095b000a2bfe.png",
     "static/media/placeholder-thumbnail.jpg": "/static/media/placeholder-thumbnail.8f9ff35ae7e91d1571df.jpg",
     "static/media/footer-steam.svg": "/static/media/footer-steam.716c8d38ff66a8b3cbe6a6fe4785d752.svg",
+    "static/media/Dungeon_steampage_heroes_hamir.png": "/static/media/Dungeon_steampage_heroes_hamir.77335d84e92c843590c0.png",
+    "static/media/Dungeon_steampage_heroes_artemis.png": "/static/media/Dungeon_steampage_heroes_artemis.d0fa1da2ce6db78b55f2.png",
+    "static/media/Dungeon_steampage_heroes_slade.png": "/static/media/Dungeon_steampage_heroes_slade.6225bd1383471dfd076a.png",
+    "static/media/Dungeon_steampage_heroes_fleet.png": "/static/media/Dungeon_steampage_heroes_fleet.17c8d9850c0c06dfb174.png",
     "static/media/paper-edge-mask.svg": "/static/media/paper-edge-mask.44fae55ca8724b8844769237c23ec622.svg",
     "static/media/header-bg.svg": "/static/media/header-bg.df9724b4bd556eea3931.svg",
     "static/media/aetherstudios-logo-small.webp": "/static/media/aetherstudios-logo-small.25ee91e21aa5e8673f96.webp",
@@ -17,11 +21,11 @@
     "static/media/dungeon-button-highlight.svg": "/static/media/dungeon-button-highlight.16879e0a7881267258ea48f8d07fe783.svg",
     "static/media/footer-twitter.svg": "/static/media/footer-twitter.991d4c95ea1d69cbcf870019c1633dc3.svg",
     "index.html": "/index.html",
-    "main.ff045395.css.map": "/static/css/main.ff045395.css.map",
-    "main.e93f3a84.js.map": "/static/js/main.e93f3a84.js.map"
+    "main.5e512ec8.css.map": "/static/css/main.5e512ec8.css.map",
+    "main.1a0d894a.js.map": "/static/js/main.1a0d894a.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff045395.css",
-    "static/js/main.e93f3a84.js"
+    "static/css/main.5e512ec8.css",
+    "static/js/main.1a0d894a.js"
   ]
 }

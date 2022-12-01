@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Routes, Route } from 'react-router-dom';
+import parseHtml from 'html-react-parser';
 import Mask from '../components/Mask';
 import '../App.css';
 import { getFeaturedImage, titleToPath } from '../functions/NewsFunctions';
@@ -50,7 +51,7 @@ function FeaturedSection() {
           {posts.arr.map((post) => {
             const path = titleToPath(post.title.rendered);
             return (
-              <Route key={`${path}`} path={`${path}`} element={<Post />} />
+              <Route key={`${path}`} path={`${path}`} element={<Post post={post} />} />
             );
           })}
         </Routes>
@@ -67,7 +68,15 @@ function Post({ post }) {
 
   return (
     <div className="news-post" style={postStyle}>
-      <div />
+      <img
+        src={getFeaturedImage(post)}
+        style={{ width: '100%' }}
+        alt={post.title.rendered}
+      />
+      <div className="text-white" style={{ display: 'block', textAlign: 'left' }}>
+        <h1>{parseHtml(post.title.rendered)}</h1>
+        <p>{parseHtml(post.content.rendered)}</p>
+      </div>
     </div>
   );
 }

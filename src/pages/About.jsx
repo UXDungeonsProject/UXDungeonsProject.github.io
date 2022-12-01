@@ -70,7 +70,7 @@ function AboutSection() {
             <div style={{ maxWidth: '550px', margin: 'auto' }}>
               <h4 style={{ marginBottom: '0.25rem' }}>{aboutText[0]}</h4>
               <h1 style={{ lineHeight: '1' }}>{aboutText[1]}</h1>
-              <p style={{ fontSize: '16px' }}>{aboutText[2]}</p>
+              <p style={{ fontSize: '20px' }}>{aboutText[2]}</p>
             </div>
           </div>
           <div className="about div3">
@@ -80,7 +80,13 @@ function AboutSection() {
                 src={DungeonsLogo}
                 alt="Dungeons of Aether Logo"
               />
-              <p style={{ marginBottom: '0.25rem' }}>
+              <p
+                style={{
+                  marginTop: '1rem',
+                  marginBottom: '0.25rem',
+                  fontSize: '20px',
+                }}
+              >
                 {aboutText[3]}
                 <a
                   className="text-primary"
@@ -104,74 +110,71 @@ function AboutSection() {
 function CharacterSection() {
   return (
     <TornPaperMask>
-      <Carousel>
+      <h1 className="character-title">Characters</h1>
+      <Carousel indicators={false}>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="character-img"
             src={Fleet}
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>Fleet</h3>
             <p>
-              Fleet is the self-proclaimed protector of her hometown of Julesvale,
-              although she&apos;s seen as a clumsy
-              menace more than a hero. As the jack of all trades,
-              Fleet is a great character for learning the combat system.
+              Fleet is the self-proclaimed protector of her hometown of
+              Julesvale, although she&apos;s seen as a clumsy menace more than a
+              hero. As the jack of all trades, Fleet is a great character for
+              learning the combat system.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="character-img"
             src={Artemis}
             alt="Second slide"
           />
 
           <Carousel.Caption>
-            <h3>Artemis</h3>
             <p>
-              Artemis is a renowned general in the Fire Mora who often fought alongside Zetterburn.
-              She was sent to Julesvale by Emperor Loxodont on a secret mission.
-              Artemis can heal her wounds in battle, showing off her innate regeneration abilities.
+              Artemis is a renowned general in the Fire Mora who often fought
+              alongside Zetterburn. She was sent to Julesvale by Emperor
+              Loxodont on a secret mission. Artemis can heal her wounds in
+              battle, showing off her innate regeneration abilities.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="character-img"
             src={Slade}
             alt="Third slide"
           />
 
           <Carousel.Caption>
-            <h3>Slade</h3>
             <p>
-              Slade is a pirate from the far-off Polekai Islands. He has made his way to
-              Julesvale hunting a mysterious rare mineral unique to Julesvale.
-              Rumor has it the mineral is key to saving his homeland.
-              Slade&apos;s style and swagger allow him to dodge attacks
-              entirely if his speed is high enough.
+              Slade is a pirate from the far-off Polekai Islands. He has made
+              his way to Julesvale hunting a mysterious rare mineral unique to
+              Julesvale. Rumor has it the mineral is key to saving his homeland.
+              Slade&apos;s style and swagger allow him to dodge attacks entirely
+              if his speed is high enough.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <div>
             <img
-              className="d-block w-100"
+              className="character-img"
               src={Hamir}
               alt="Fourth slide"
             />
           </div>
           <Carousel.Caption>
-            <h3>Hamir</h3>
             <p>
-              Hamir is a former Wall Runner from the mighty Rock Wall.
-              He has made his way to Julesvale in exile after losing his trusted partner.
-              Hamir now finds himself looking for a purpose
-              and the courage to carry on.
-              Hamir is strong and sturdy,
-              weathering blows until the time is right to crush his foes.
+              Hamir is a former Wall Runner from the mighty Rock Wall. He has
+              made his way to Julesvale in exile after losing his trusted
+              partner. Hamir now finds himself looking for a purpose and the
+              courage to carry on. Hamir is strong and sturdy, weathering blows
+              until the time is right to crush his foes.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -184,54 +187,57 @@ function ModeSection() {
   return (
     <div>
       <div className="largermargins">
+        <h1 className="character-title"> Modes</h1>
         <img
-          className="d-block w-100"
+          className="d-block w-75 mx-auto m-3"
           src={Story}
           alt="First slide"
         />
-        <p className="whitetext">
+        <p className=" whitetext w-75 text-center m-auto">
           The world of Aether is expanding and Dungeons of Aether adds a new,
-          fascinating facet to the ever-expanding lore!
-          Travel to the steam-punk town of Julesvale and
-          brave the sprawling caverns underneath it.
-          In Story Mode, you&apos;ll play a roguelite adventure
-          that has you starting each dive from town.
-          There you can interact with towns folk and spend
-          your hard-earned gold to gear up for your next run.
+          fascinating facet to the ever-expanding lore! Travel to the steam-punk
+          town of Julesvale and brave the sprawling caverns underneath it. In
+          Story Mode, you&apos;ll play a roguelite adventure that has you
+          starting each dive from town. There you can interact with towns folk
+          and spend your hard-earned gold to gear up for your next run.
         </p>
         <img
           className="d-block mx-auto"
           src={HamirGif}
           alt="HamirGif"
+          style={{
+            border: '5px solid #fff',
+            borderRadius: '20px',
+            margin: '20px',
+          }}
         />
-        <p className="whitetext">
-          Each of the dungeons you&apos;ll dive into
-          have new challenges to face and rewards to collect.
-          As you dive into Julesvale Mines, the Lava Caves,
-          the Underground Oasis and the Mineral Deposits,
-          you&apos;ll be able to collect Journal Entries that
-          reveal even more about Julesvale and its legendary past.
+        <p className="whitetext w-75 m-auto">
+          Each of the dungeons you&apos;ll dive into have new challenges to face
+          and rewards to collect. As you dive into Julesvale Mines, the Lava
+          Caves, the Underground Oasis and the Mineral Deposits, you&apos;ll be
+          able to collect Journal Entries that reveal even more about Julesvale
+          and its legendary past.
         </p>
       </div>
       <div className="largermargins">
         <img
-          className="d-block w-100"
+          className="d-block w-75 mx-auto  m-3"
           src={Challenge}
           alt="Second slide"
         />
-        <p className="whitetext">
-          Story Mode gives you a chance to casually prepare,
-          interact with NPCs, and savor the exploration of the world,
-          In Challenge Dungeons it&apos;s all up to you!.
-          The Challenge Dungeons also feature a leaderboard based on how
-          much gold you have at the end of the run.
-          Will you spend your gold to make sure you can get through or are you greedy?
-        </p>
-        <p className="whitetext">
-          For those of you looking for true roguelike difficulty,
-          the Challenge Dungeons are where you will want to test your skills.
-          Each Challenge Dungeon is randomly generated with unique rules and starting equipment.
-          Your mission is to go through all of the biomes in the game in a single run.
+        <p className="whitetext w-75 m-auto">
+          Story Mode gives you a chance to casually prepare, interact with NPCs,
+          and savor the exploration of the world, In Challenge Dungeons
+          it&apos;s all up to you!. The Challenge Dungeons also feature a
+          leaderboard based on how much gold you have at the end of the run.
+          Will you spend your gold to make sure you can get through or are you
+          greedy?
+          <br />
+          For those of you looking for true roguelike difficulty, the Challenge
+          Dungeons are where you will want to test your skills. Each Challenge
+          Dungeon is randomly generated with unique rules and starting
+          equipment. Your mission is to go through all of the biomes in the game
+          in a single run.
         </p>
       </div>
     </div>

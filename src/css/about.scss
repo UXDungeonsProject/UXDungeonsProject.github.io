@@ -1,3 +1,12 @@
+
+@import "../../node_modules/bootstrap/scss/variables";
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
 .about-bg {
     height: 95vh;
     max-height: 1000px;
@@ -19,7 +28,7 @@
 .about.div2 {
     grid-column: 3 / span 2;
     grid-row: 1;
-    padding: 10vw 0px;
+    padding: 8vw 0px;
     text-align: left;
     color: rgba(255, 255, 255, 0.87);
     line-height: 1.1;
@@ -37,11 +46,54 @@
 }
 
 .whitetext {
-    color: white
+    color: black;
+    max-width: 65vw;
+    font-size: 1.5rem;
+    margin: 10px auto;
+    border-width:5px; 
+    border-style:solid; 
+    border-color:#000;
+    background-color: #BDB499;
+    border-radius: 10px;
+    padding: 7px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .largermargins {
     margin-bottom: 5rem
+}
+
+//carousel styles
+.character-title{
+    padding-top: 100px;
+    font-size: 4rem;
+    font-family: 'Press Start 2P';
+    color: white;    
+    text-shadow: 2px 2px 5px #000000;
+
+}
+.carousel-inner img {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 40px;
+    margin-bottom: 150px;
+}
+.character-img{
+    min-width: 30%;
+}
+
+.carousel-caption p {
+    max-width: 60vw;
+    margin: auto;
+    padding: 5px;
+    font-size: 0.9rem;
+    font-family: 'Press Start 2P';
+    line-height: 1.5;
+    border-width:5px; 
+    border-style:solid; 
+    border-color:#BFBFBF;
+    background-color: #000000;
+    border-radius: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -54,11 +106,17 @@
         grid-row: 3;
         text-align: center;
     }
+    .carousel-caption p {
+        font-size: 0.6rem;
+    }
 }
 
 @media (max-width: 767px) {
     .about-bg {
         grid-template-rows: repeat(4, 150px);
+    }
+    .carousel-caption p {
+        font-size: 0.5rem;
     }
 }
 

@@ -1,12 +1,22 @@
 //import fonts
 @import url('https://fonts.googleapis.com/css?family=Bungee');
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap');
 //overwrite Bootstrap theme variables
 
 $light: #39240c;
 $dark: #281d17;
 $primary: #ff993f;
 
+$cwidth: (
+    65: 65%,
+    60: 60%,
+    80: 80%,
+    40: 40%,
+    35: 35%,
+    30: 30%,
+);
 
 //import Bootstrap css
 @import 'bootstrap/scss/bootstrap.scss';
@@ -27,6 +37,7 @@ $primary: #ff993f;
     font-weight: 400;
 }
 
+
 @import './navbar.scss';
 
 @import './home.scss';
@@ -34,3 +45,4 @@ $primary: #ff993f;
 @import './about.scss';
 
 @import './news.scss';
+
